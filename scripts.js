@@ -1,16 +1,53 @@
+// Ask the user for the title and description of task 1
+const task1Title = prompt("enter task 1 title");
+const task1Description = prompt("enter task 1 description");
+// Ask for the status of task 1 and convert it to lowercase
+let task1Status = prompt(
+  "Enter task 1 status (todo, doing, done):",
+).toLowerCase ();
+// Keep asking until the user enters a valid status for task 1
+while (
+  task1Status !== "todo" &&
+  task1Status !== "doing" &&
+  task1Status !== "done"
+) {
+  alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
+  task1Status = prompt(
+    "Enter task 1 status (todo, doing, done):",
+  ).toLowerCase();
+}
 
-const title1 = prompt ("Enter task 1 title");
-console.log (title1);
-const description1 = prompt ("Enter task 1 description");
-console.log (description1);
-const status1 = prompt ("Enter task 1 status");
-console.log (status1);
+// Ask the user for the title and description of task 2
+const task2Title = prompt("enter task 2 title");
+const task2Description = prompt("enter task 2 description");
+// Ask for the status of task 2 and convert it to lowercase
+let task2Status = prompt(
+  "Enter task 2 status (todo, doing, done):",
+).toLowerCase();
+// Keep asking until the user enters a valid status for task 2
+while (
+  task2Status !== "todo" &&
+  task2Status !== "doing" &&
+  task2Status !== "done"
+) {
+    console.log(task2Status);
+  alert("Invalid status. Please enter 'todo', 'doing', or 'done'.");
+  task2Status = prompt(
+    "Enter task 2 status (todo, doing, done):",
+  ).toLowerCase();
+}
 
-const title2 = prompt("Enter task 2 title");
-console.log(title2);
-const description2 = prompt("Enter task 2 description");
-console.log(description2);
-const status2 = prompt("Enter task 2 status");
-console.log(status2);
+// Check if task1 is done, and log it if so
+if (task1Status === "done") {
+  console.log("Title: " + task1Title + ", status: " + task1Status);
+}
 
+// Check if task2 is done, and log it if so
+if (task2Status === "done") {
+  console.log("Title: " + task2Title + ", status: " + task2Status);
+}
 
+// If neither task1 nor task2 is done, show a motivational message
+if (task1Status !== "done" && task2Status !== "done") {
+  console.log("No tasks completed, let's get to work!");
+}
